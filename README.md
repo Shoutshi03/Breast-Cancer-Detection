@@ -28,33 +28,9 @@ Install dependencies using:
 pip install -r requirements.txt
 ```
 
-## Project Structure
-```
-breast-cancer-detection/
-│
-├── data/
-│   ├── train/              # Training images
-│   ├── validation/         # Validation images
-│   ├── test/               # Test images
-│
-├── notebooks/
-│   ├── data_preprocessing.ipynb  # Data loading and augmentation
-│   ├── model_training.ipynb      # Model training and evaluation
-│
-├── scripts/
-│   ├── preprocess.py       # Data preprocessing script
-│   ├── train_model.py      # Model training script
-│   ├── evaluate_model.py   # Model evaluation script
-│
-├── models/
-│   ├── resnet50_model.h5   # Trained ResNet50 model
-│
-├── reports/
-│   ├── Breast_Cancer_Detection_Report.pdf  # Detailed project report
-│
-├── README.md               # This file
-├── requirements.txt        # Python dependencies
-```
+## How to set up project workflow ?
+
+
 
 ## Installation
 1. Clone the repository:
@@ -103,18 +79,17 @@ breast-cancer-detection/
   - Epochs: 20.
   - Batch Size: 32.
 - **Performance**:
-  - Accuracy: 82.40%
-  - ROC AUC: 0.8328
-  - Precision (Malignant): 0.64
-  - Recall (Malignant): 0.85
-  - F1-Score (Malignant): 0.73
+  - Accuracy: 88.40%
+  - Precision (Malignant): 0.93
+  - Recall (Malignant): 0.90
+  - F1-Score (Malignant): 0.91
 
 ## Results
 The model effectively identifies malignant cases (high recall of 0.85), crucial for minimizing missed diagnoses. However, lower precision (0.64) for malignant cases indicates some false positives, likely due to class imbalance. The ROC AUC of 0.8328 suggests good discriminative ability.
 
 ## Challenges
 - **Class Imbalance**: The dataset has 71.5% benign vs. 28.5% malignant images, potentially biasing the model.
-- **Small Image Size**: 50x50 pixel images limit feature extraction.
+- **Small Image Size**: 48x48 pixel images limit feature extraction.
 - **Overfitting**: Mitigated through data augmentation and dropout but remains a concern.
 
 ## Future Work
